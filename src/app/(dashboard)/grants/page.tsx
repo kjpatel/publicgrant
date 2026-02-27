@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { GrantsList } from "./grants-list";
+import { SyncButton } from "./sync-button";
 import type { Grant } from "@/types/database";
 
 export default async function GrantsPage({
@@ -34,11 +35,14 @@ export default async function GrantsPage({
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">Grants</h1>
-        <p className="text-muted-foreground">
-          Browse and search available funding opportunities.
-        </p>
+      <div className="flex items-start justify-between">
+        <div>
+          <h1 className="text-2xl font-bold">Grants</h1>
+          <p className="text-muted-foreground">
+            Browse and search available funding opportunities.
+          </p>
+        </div>
+        <SyncButton />
       </div>
       <GrantsList
         grants={grants}
