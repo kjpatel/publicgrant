@@ -49,9 +49,15 @@ supabase/
 
 ### Prerequisites
 
-- Node.js 20+
-- [Supabase CLI](https://supabase.com/docs/guides/cli)
-- An [Anthropic API key](https://console.anthropic.com/)
+Install the following via Homebrew:
+
+```bash
+brew install node@22                  # Node.js runtime
+brew install supabase/tap/supabase    # Supabase CLI
+brew install --cask docker            # Docker Desktop (required by Supabase CLI)
+```
+
+You'll also need an [Anthropic API key](https://console.anthropic.com/).
 
 ### 1. Clone and install
 
